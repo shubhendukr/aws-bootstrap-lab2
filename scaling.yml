@@ -403,7 +403,7 @@ Resources:
               nvm install v12.7.0
               nvm use v12.7.0
 
-              wget https://github.com/HafsaKamran/aws-bootstrap/archive/main.zip 
+              wget https://github.com/CourseMaterial/aws-bootstrap/archive/main.zip 
               unzip main.zip
               mv automatic-deployments-main app
 
