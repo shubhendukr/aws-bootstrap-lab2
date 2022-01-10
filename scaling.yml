@@ -402,18 +402,9 @@ Resources:
               nvm alias default v12.7.0
               nvm install v12.7.0
               nvm use v12.7.0
-
-              wget https://github.com/CourseMaterial/aws-bootstrap/archive/main.zip 
-              unzip main.zip
-              mv automatic-deployments-main app
-
+              
               # Create log directory
               mkdir -p /home/ec2-user/app/logs
-
-              # Run server
-              cd app
-              npm install
-              npm start
             EOF
 
             chown ec2-user:ec2-user /tmp/install_script.sh && chmod a+x /tmp/install_script.sh
