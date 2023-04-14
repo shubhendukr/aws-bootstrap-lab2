@@ -37,7 +37,6 @@ Resources:
               - "ec2.amazonaws.com"
           Action: sts:AssumeRole
       ManagedPolicyArns:
-        - arn:aws:iam::aws:policy/CloudWatchFullAccess
         - arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforAWSCodeDeploy
       Tags:
         - Key: Name
