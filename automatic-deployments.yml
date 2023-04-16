@@ -106,7 +106,7 @@ Resources:
             # Download latest code, unzip it into /home/ec2-user/app
             wget https://github.com/CourseMaterial/aws-bootstrap-lab/archive/main.zip 
             unzip main.zip
-            mv aws-bootstrap-main app
+            mv aws-bootstrap-lab-main app
 
             # Create log directory
             mkdir -p /home/ec2-user/app/logs
