@@ -3,6 +3,7 @@ AWSTemplateFormatVersion: 2010-09-09
 Parameters:
   EC2InstanceType:
     Type: String
+    Default: t2.micro
   EC2AMI:
     Type: 'AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>'
     Default: '/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2'
@@ -51,7 +52,7 @@ Resources:
     Type: AWS::EC2::Instance
     CreationPolicy: 
       ResourceSignal:
-        Timeout: PT15M
+        Timeout: PT5M
         Count: 1
     Metadata:
       AWS::CloudFormation::Init:
@@ -104,9 +105,9 @@ Resources:
             nvm use v12.7.0
 
             # Download latest code, unzip it into /home/ec2-user/app
-            wget https://github.com/CourseMaterial/aws-bootstrap-lab/archive/main.zip 
+            wget https://github.com/CourseMaterial/aws-bootstrap-lab2/archive/main.zip 
             unzip main.zip
-            mv aws-bootstrap-lab-main app
+            mv aws-bootstrap-lab2-main app
 
             # Create log directory
             mkdir -p /home/ec2-user/app/logs
