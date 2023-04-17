@@ -27,9 +27,9 @@ Resources:
         - Key: Name
           Value: !Ref AWS::StackName
   InstanceRole:
-    RoleName: "aws-bootstrap-lab-instance-role"
     Type: "AWS::IAM::Role"
     Properties:
+      RoleName: "aws-bootstrap-lab-instance-role"
       AssumeRolePolicyDocument:
         Version: "2012-10-17"
         Statement:
